@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/material-design-iconic-font.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <link rel="icon" href="img/ico.ico">
+    <title>GameStore</title>
+
+</head>
+
+<body>
+
+    <!-- Barra de navegación -->
+
+    <header>
+
+        <!-- <i class="zmdi zmdi-chevron-down"></i> -->
+
+        <nav class="navbar">
+            <header class="nabvar-mobile is-size-5-mobile">
+                <a class="navbar-mobile-link has-text-white" href="#" id="btn-mobile"><i class="zmdi zmdi-menu"></i></a>
+                <a class="navbar-mobile-link has-text-white" href="index.html">GameStore</a>
+                <a class="navbar-mobile-link has-text-white" href="#"><i class="zmdi zmdi-shopping-cart"></i> Vacio</a>
+            </header>
+
+            <nav class="nav-menu" id="mySidenav">
+
+                <div class="form-group">
+                    <div class="form-group-container">
+                        <span class="form-group-icon"><i class="zmdi zmdi-search"></i></span>
+                        <input type="search" placeholder="Buscar..." id="inputBusqueda">
+                    </div>
+                </div>
+
+                <div class="search" id="search">
+                    <table class="search-table" id="searchTable">
+                        <thead>
+                            <tr>
+                                <td></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="juegos/Amungus.html">Amung Us</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Cursos</a></td>
+                                </a>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Servicios</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Contacto</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Curso Html</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Nuevo Articulo</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Curso de CSS</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Curso Javascript</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Curso Jquery</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Curso Ajax</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Curso PHP</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Curso Angular Js</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Curso Angular 2</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Mas cursos</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#">Noticias</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+
+
+                <a class="is-hidden-mobile brand is-uppercase has-text-weight-bold has-text-dark" href="index.html">GameStore</a>
+                <ul class="nav-menu-ul">
+                    <li class="nav-menu-item" id="men">
+
+                        <a class="nav-menu-link">Categorias <i
+                                class="zmdi zmdi-chevron-down"></i></a>
+
+                        <div class="container-sub-menu">
+                            <ul class="sub-menu-ul">
+
+                                <li class="nav-menu-item ">
+                                    <a class="nav-menu-link" href="#">
+
+                                        <strong>Tipos</strong>
+                                        <i class="zmdi zmdi-chevron-down "></i>
+                                    </a>
+                                    <ul class="sub-menu-ul">
+                                        <li class="nav-menu-item"><a class="nav-menu-link" href="#">Accion</a></li>
+                                        <li class="nav-menu-item"><a class="nav-menu-link" href="#">Carerras</a>
+                                        </li>
+                                        <li class="nav-menu-item"><a class="nav-menu-link" href="#">Aventura</a></li>
+                                        <li class="nav-menu-item"><a class="nav-menu-link" href="#">Combate</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="sub-menu-ul">
+                                <li class="nav-menu-item">
+                                    <a class="nav-menu-link" href="#">
+                                        <strong>Tipos</strong>
+                                        <i class="zmdi zmdi-chevron-down "></i>
+                                    </a>
+                                    <ul class="sub-menu-ul">
+                                        <li class="nav-menu-item"><a class="nav-menu-link" href="#">Terror</a></li>
+                                        <li class="nav-menu-item"><a class="nav-menu-link" href="#">Disparos</a></li>
+                                        <li class="nav-menu-item"><a class="nav-menu-link" href="#">Simulacion</a></li>
+                                        <li class="nav-menu-item"><a class="nav-menu-link" href="#">Supervivencia</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="ads is-hidden-touch">
+                                <h1 class="ads-h1">GameStore</h1>
+                                <h2 class="ads-h2">Lo Mejor en Juegos</h2>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-menu-item" id="women">
+                        <a href="#" class="nav-menu-link link-submenu"> Año <i class="zmdi zmdi-chevron-down"></i> </a>
+                        <div class="container-sub-menu">
+
+                            <ul class="sub-menu-ul">
+                                <li class="nav-menu-item ">
+                                    <a class="nav-menu-link" href="#">
+                                        <strong>Año</strong>
+                                        <i class="zmdi zmdi-chevron-down "></i>
+                                    </a>
+                                    <ul class="sub-menu-ul">
+                                        <li class="nav-menu-item"><a class="nav-menu-link" href="#">2020</a></li>
+                                        <li class="nav-menu-item"><a class="nav-menu-link" href="#">2019</a>
+                                        </li>
+                                        <li class="nav-menu-item"><a class="nav-menu-link" href="#">2018</a></li>
+                                        <li class="nav-menu-item"><a class="nav-menu-link" href="#">2017</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="sub-menu-ul">
+                                <li class="nav-menu-item">
+                                    <a class="nav-menu-link" href="#">
+                                        <strong>Año</strong>
+                                        <i class="zmdi zmdi-chevron-down "></i>
+                                    </a>
+                                    <ul class="sub-menu-ul">
+                                        <li class="nav-menu-item"><a class="nav-menu-link" href="#">2016</a></li>
+                                        <li class="nav-menu-item"><a class="nav-menu-link" href="#">2015</a></li>
+                                        <li class="nav-menu-item"><a class="nav-menu-link" href="#">2014</a></li>
+                                        <li class="nav-menu-item"><a class="nav-menu-link" href="#">2013</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="sub-menu-ul">
+                                <li class="nav-menu-item">
+                                    <a class="nav-menu-link" href="#">
+                                        <strong>Año</strong>
+                                        <i class="zmdi zmdi-chevron-down "></i>
+                                    </a>
+                                    <ul class="sub-menu-ul">
+                                        <li class="nav-menu-item"><a class="nav-menu-link" href="#">2012</a></li>
+                                        <li class="nav-menu-item"><a class="nav-menu-link" href="#">2011</a></li>
+                                        <li class="nav-menu-item"><a class="nav-menu-link" href="#">2010</a></li>
+                                        <li class="nav-menu-item"><a class="nav-menu-link" href="#">2009</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="ads is-hidden-touch">
+                                <h1 class="ads-h1">GameStore</h1>
+                                <h2 class="ads-h2">Lo mejor en Juegos</h2>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-menu-item"><a href="brand.html" class="nav-menu-link">Nosotros</a></li>
+                    <li class="nav-menu-item"><a href="lookbook.html" class="nav-menu-link">Lista de Juegos</a></li>
+                    <li class="nav-menu-item"><a href="Login GameStore/index.php" class="nav-menu-link">Iniciar Sesión</a></li>
+                </ul>
+            </nav>
+        </nav>
+
+    </header>
+
+    <!-- Banner -->
+
+    <div class="banner banner-cover">
+        <div class="banner-container ">
+            <h1 class="title-cover">GameStore</h1>
+            <a href="lookbook.html" class="btn btn-default">Lista de Juegos</a>
+        </div>
+    </div>
+
+    <!-- Barra de navegacion secundaria -->
+
+    <div class="container">
+        <nav class="nav">
+            <a class="nav-item active has-text-weight-semibold" href="#">Populares</a>
+            <a class="nav-item has-text-weight-semibold" href="#">Novedades</a>
+            <a class="nav-item has-text-weight-semibold" href="#">Más Descargados</a>
+            <a class="nav-item has-text-weight-semibold" href="#">Clasicos</a>
+            <a class="nav-item has-text-weight-semibold" href="#">Muy pronto</a>
+        </nav>
+    </div>
+
+    <!-- Sección de fotografías -->
+
+    <div class="container">
+        <div class="columns is-multiline">
+            <div class="column is-full-mobile">
+                <div class="columns is-centered is-mobile is-multiline">
+
+                    <!-- 1 Sección de fotografías -->
+
+                    <div class="column is-half column-full">
+                        <div class="card">
+                            <span class="price"></span>
+                            <img src="img/AmongUs.jpg" alt="">
+                            <div class="card-info">
+                                <h4 class="has-text-black has-text-centered has-text-weight-bold"> Amung Us </h4>
+                                <p class="has-text-centered">Among Us​ es un videojuego modo fiesta multijugador en línea desarrollado por InnerSloth y lanzado el 15 de junio de 2018.
+                                </p>
+                                <div class="card-buttons">
+                                    <a href="juegos/Amungus.html" class="btn btn--mini-rounded"><i
+                                        class="iconify" data-icon="carbon:download"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column column-full is-half">
+                        <div class="card">
+                            <span class="price"></span>
+                            <img src="img/cover-pc.jpg" alt="">
+                            <div class="card-info">
+                                <h4 class="has-text-black has-text-centered has-text-weight-bold"> Assassin’s Creed Unity </h4>
+                                <p class="has-text-centered">Assassin’s Creed Unity PC Full Español es otra parte de la aventura de acción más popular producida por Ubisoft, conocida como el padre de la serie de Prince of Persia, Far Cry, Rayman y demás, este es uno de los proyectos
+                                    más grandes en la historia de la industria de los videojuegos. cotton.
+                                </p>
+                                <div class="card-buttons">
+                                    <a href="producto.html" class="btn btn--mini-rounded"><i
+                                        class="iconify" data-icon="carbon:download"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column is-full">
+                        <div class="card">
+                            <span class="price"></span>
+
+                            <img src="img/Red Dead Redemption 2.jpg" alt="">
+                            <div class="card-info">
+                                <h4 class="has-text-black has-text-centered has-text-weight-bold"> Red Dead Redemption 2 </h4>
+                                <p class="has-text-centered">Red Dead Redemption 2 es un videojuego de acción-aventura western, en un mundo abierto y en perspectiva de primera y tercera persona, ​ con componentes para un jugador y multijugador.​</p>
+                                <div class="card-buttons">
+                                    <a href="producto.html" class="btn btn--mini-rounded"><i
+                                        class="iconify" data-icon="carbon:download"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Segunda sección de fotografías -->
+
+            <div class="column is-half is-full-mobile">
+                <div class="columns is-mobile is-multiline">
+                    <div class="column is-full">
+                        <div class="card">
+                            <span class="price"></span>
+                            <img src="img/Halo.png" alt="">
+                            <div class="card-info">
+                                <h4 class="has-text-black has-text-centered has-text-weight-bold"> Halo The Master Chief Collection </h4>
+                                <p class="has-text-centered">Halo The Master Chief Collection PC Full Español es una compilación de juegos FPS de la serie Halo, desarrollados por el estudio 343Industries, responsables de la marca.</p>
+                                <div class="card-buttons">
+                                    <a href="producto.html" class="btn btn--mini-rounded"><i
+                                        class="iconify" data-icon="carbon:download"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column column-full is-half">
+                        <div class="card">
+                            <span class="price"></span>
+                            <img src="img/Forza-Horizon-4.jpg" alt="">
+                            <div class="card-info">
+                                <h4 class="has-text-black has-text-centered has-text-weight-bold"> Forza Horizon 4 </h4>
+                                <p class="has-text-centered">Forza Horizon 4 PC Full Español , es la cuarta entrega de la serie de juegos de carreras de mundo abierto más vendida desarrollada por Playground Games.</p>
+                                <div class="card-buttons">
+                                    <a href="producto.html" class="btn btn--mini-rounded"><i
+                                        class="iconify" data-icon="carbon:download"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column column-full is-half">
+                        <div class="card">
+                            <span class="price"></span>
+                            <img src="img/Microsoft-Flight-Simulator.jpg" alt="">
+                            <div class="card-info">
+                                <h4 class="has-text-black has-text-centered has-text-weight-bold"> Microsoft Flight Simulator 2020 </h4>
+                                <p class="has-text-centered">Microsoft Flight Simulator 2020 es una nueva entrega de la legendaria serie de simuladores de vuelo, el proyecto fue desarrollado por uno de los equipos del grupo Xbox Games Studios. </p>
+                                <div class="card-buttons">
+                                    <a href="producto.html" class="btn btn--mini-rounded"><i
+                                        class="iconify" data-icon="carbon:download"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Requicitos-->
+
+    <div class="container container-full">
+        <div class="columns is-centered is-multiline">
+            <div class="column is-full">
+                <div class="separator"></div>
+            </div>
+
+            <div class="column is-half-tablet is-one-third-desktop column-half">
+                <div class="card card-second">
+                    <img class="card-second-image" src="img/Red Dead Redemption portada.jpg" alt="">
+                    <div class="card-second-body --text-right">
+                        <h1 class="has-text-right is-size-4 has-text-weight-semibold-bold">Altos Requicitos</h1>
+                        <p class="has-text-right">sección de juegos de Altos Requisitos para PC, les recuerdo que estos juegos son los que requieren una PC de gama Alta para correr perfectamente, por lo general van desde los 6 GB de Ram hasta 12 GB.
+                        </p>
+
+                        <div>
+                            <a href="#" class="btn btn-default is-size-7">Ver ahora</a>
+                        </div>
+                        </p>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="column is-half-tablet is-one-third-desktop column-half">
+                <div class="card card-second">
+                    <img class="card-second-image" src="img/portada american.jpg" alt="">
+                    <div class="card-second-body --text-right">
+                        <h1 class="has-text-right is-size-4 has-text-weight-semibold-bold">Medios Requcitos</h1>
+                        <p class="has-text-right">sección de juegos de medios requisitos para PC, estos juegos son los más comunes ya que están echos para las PC promedio que tengan al menos 4 de ram, procesador de 2.0ghz y con tarjeta de vídeo Intel HD
+                        </p>
+                        <div>
+                            <a href="#" class="btn btn-default is-size-7">Ver ahora</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="column is-half-tablet is-one-third-desktop">
+                <div class="card card-second">
+                    <img class="card-second-image" src="img/portada need4speed.jpg" alt="">
+                    <div class="card-second-body --text-right">
+                        <h1 class="has-text-right is-size-4 has-text-weight-semibold-bold">Bajos Requicitos</h1>
+                        <p class="has-text-right">sección de juegos para PC de Bajos requisitos, estos juegos son aquellos cuyas características los hacen bastante ligeros tanto en peso como en consumo de PC, están por debajo de los 2gb de Ram, procesador des hasta 1.0ghz
+                        </p>
+                        <div>
+                            <a href="#" class="btn btn-default is-size-7">Ver ahora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-multiline">
+                <div class="column">
+                    <ul class="footer-ul">
+                        <li class="footer-item">
+
+                </div>
+                <div class="column is-full">
+                    <div class="footer-socials">
+                        <a class="footer-solcials-link" href="#"><i class="zmdi zmdi-facebook"></i></a>
+                        <a class="footer-solcials-link" href="#"><i class="zmdi zmdi-twitter"></i></a>
+                        <a class="footer-solcials-link" href="#"><i class="zmdi zmdi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bar-top">
+            <div class="container">
+                <a class="footer-bar-top-links" href="#">CopyRight 2019-2020 GameStore</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+    <script src="js/buscador.js"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+
+</body>
+
+</html>

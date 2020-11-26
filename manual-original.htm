@@ -1,0 +1,195 @@
+<html>
+<head>
+<title>XSearch5 Manual</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+h1 {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 18pt; font-weight: bold}
+h2 {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 16pt; font-weight: bold; margin-left: 2%}
+p {  font-family: Verdana, Arial, Helvetica, sans-serif; margin-left: 5%; font-size: 10pt}
+h3 {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12pt; margin-left: 3%; font-weight: bold}
+ul {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt}
+li {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt}a:hover {  font-family: Verdana, Arial, Helvetica, sans-serif; color: #990000; text-decoration: underline; font-size: 10pt}
+a:active {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt; color: #000099; text-decoration: none}
+a {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10pt; text-decoration: none}
+h6 {  font-family: "Courier New", Courier, mono; font-size: 10pt; font-weight: normal; margin-left: 5%}
+h4 {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12pt; font-weight: bold; color: #990000; margin-left: 3%}
+-->
+</style></head>
+
+<body bgcolor="#FFFFFF">
+<h1>XSearch 5.2</h1>
+<h3>User manual</h3>
+<h2>Overview</h2>
+<p>The XSearch script is a powerfull javascript search engine. This version5 is 
+  an improved version of the older v4.x versions. One of the main changes is that 
+  it's not compatible with 3.0 browsers. There are some other minor changes and 
+  some things have been left out because not many people used it. If you still 
+  want the functionality of the previous versions please download version4.3 from 
+  the dynamic-core.net website <a href="http://www.dynamic-core.net">http://www.dynamic-core.net</a>. 
+  Note that XSearch5 is much faster, and more customizeable then the older versions.</p>
+<h2>Files explained</h2>
+<p>The following files are supplied with XSearch5:</p>
+<ul>
+  <li>db.js 
+	<ul>
+	  <li>This file contains the database as it is used by XSearch to search through.</li>
+	</ul>
+  </li>
+  <li>manual.htm 
+	<ul>
+	  <li>This file you'r reading.</li>
+	</ul>
+  </li>
+  <li>xsearch.css 
+	<ul>
+	  
+      <li> A cascading style sheet file, used to define the markup of the text 
+        in XSearch.</li>
+	</ul>
+  </li>
+  <li>xsearch-5.2.js 
+    <ul>
+	  
+      <li>The XSearch5.2 javascript engine (the core).</li>
+	</ul>
+  </li>
+  <li>xsearch-5.2.htm 
+    <ul>
+	  
+      <li>The example html file, that will show you a working XSearch5 engine.</li>
+	</ul>
+	
+  </li>
+</ul>
+<h2>Creating the Database</h2>
+<p><i>WARNING: Updated for version5.2, the db.js file is now created in another 
+  way, please read!</i><br>
+  <br>
+  This chapter will explain how you can fill the XSearch database with your own 
+  url's and keywords.</p>
+<p>The db.js file contains the definition of the database needed by XSearch. XSearch 
+  is build using Javascript, this has the advantage that everybody can use it 
+  without the need for a cgi-bin or other server side options. The disadvantage 
+  of using Javascript is that it's impossible to search through directory structures 
+  and files on the server. So you'll have to create the database manually for 
+  every page in your website. </p>
+<h3>Entries </h3>
+<p> Every XSearch database entry (record) is created using three text array's. 
+  The first of these arrays will contain a working link to the target html file, 
+  the second array contains a set of keywords, and finally the third array contains 
+  a description of the current database entry. Xsearch adds a new function called 
+  add() you can use this to add the record information to the database:</p>
+<h6>add(url,keywords,description)</h6>
+<h6>example:<br>
+  <br>
+  add(&quot;&lt;a href='http://www.dynamic-core.net'&gt;dynamic-core.net&lt;/a&gt;&quot;,&quot;great dhtml xsearch javascript search engine&quot;,&quot;This is the homepage 
+  of dynamic-core.net, including the XSearch5.0 homepage&quot;)<br>
+</h6>
+<p>As you can see in the above example, it's very simple to create a new record. 
+</p>
+<h2>XSearch CSS style sheet</h2>
+<p>The xsearch.css file, contains the styles used by the XSearch5 engine to display 
+  the different text lines. By modifying this file, you can change the look of 
+  every text line used in the XSearch engine. This is a big improvement over the 
+  old XSearch engines that could only change the color of the fonts.</p>
+<ul>
+  <li>h3 
+	<ul>
+	  <li>Small header text used for the &quot;showing results ... &quot; line 
+		at the top of the results page.</li>
+	</ul>
+  </li>
+  <li>p 
+	<ul>
+	  <li>Used for output of normal text, as example see the No results page, 
+		and then the line that says: &quot;Your search ... did not match...&quot;</li>
+	</ul>
+  </li>
+  <li>li 
+	<ul>
+	  <li>Used on the No results page, to list the options for a better searching-result.</li>
+	</ul>
+  </li>
+  <li>xtitle
+	<ul>
+	  <li>Used to display the link in every record of the results.</li>
+	</ul>
+  </li>
+  <li>xresult 
+	<ul>
+	  <li>Used to show the description of every record.</li>
+	</ul>
+  </li>
+  <li>xlocation 
+	<ul>
+	  <li>Used to display the link in text (below the description)</li>
+	</ul>
+  </li>
+  <li>xsmall 
+	<ul>
+	  <li>This is used for the &quot;Previous&quot; and &quot;Next&quot; page 
+		text.</li>
+	</ul>
+  </li>
+</ul>
+<h2>Configuration parameters</h2>
+<p>The db.js file contains a few variables that need to be set to make 
+  the search work correctly.</p>
+<ul>
+  <li>searchname 
+	<ul>
+	  <li>As with the previous xsearch versions, this variable defines the xsearch 
+		filename. This is basiclly the current file name.</li>
+	</ul>
+  </li>
+  <li>usebannercode 
+	<ul>
+	  <li>This variable was also used in previous versions, it defines if you 
+		want to show the banner code, set it to true or false.</li>
+	</ul>
+  </li>
+  <li>ButtonCode
+	<ul>
+	  
+      <li>This has changed from the previous version. Xsearch5 doesn't use an 
+        image to search. You can put in any code you want, for example, if you 
+        want to make it look like the previous xsearch versions do this:</li>
+	</ul>
+  </li>
+</ul>
+<h6>ButtonCode = &quot;&lt;img src='searchbutton.gif' border=0&gt;&quot;</h6>
+<p>templateBody() , templateEnd() and bannerCode() for more information on these 
+  functions, read the article: <a href="http://www.dynamic-core.net/knowledgebase/article-2000/Setting%20up%20your%20own%20search%20engine.htm">Setting 
+  up your own search engine</a>. That article was written for the older versions 
+  of XSearch, but the templateBody(), templateEnd() and bannerCode() workings 
+  haven't changed.</p>
+<h2>Making it work</h2>
+<p>Finally you'll have to create a HTML file that links the XSearch5 engine and 
+  the database like this:</p>
+<p><i>Warning: The order of linking the two files is very important, make sure 
+  the xsearch-5.js file is linked first, and the db.js file second.. otherwise 
+  you'll get some error messages.</i></p>
+<h6>&lt;html&gt;<br>
+  &lt;head&gt;<br>
+  &lt;title&gt;Xsearch 5&lt;/title&gt;<br>
+  <br>
+  &lt;script language=&quot;Javascript&quot; src=&quot;xsearch-5.2.js&quot;&gt;&lt;/script&gt;<br>
+  &lt;script language=&quot;Javascript&quot; src=&quot;db.js&quot;&gt;&lt;/script&gt;<br>
+  <br>
+  &lt;body bgColor=&quot;#ffffff&quot;&gt;<br>
+  &lt;script language=&quot;Javascript&quot;&gt;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;initXsearch()<br>
+  &lt;/script&gt;<br>
+  &lt;/body&gt;<br>
+  &lt;/html&gt;</h6>
+<h2>Contact information</h2>
+<p>If you have any questions after this manual, please browse through the old 
+  XSearch FAQ and knowledge base articles (<a href="http://www.dynamic-core.net">http://www.dynamic-core.net</a>) 
+  before mailing me. Most problems have already been explained in one of those 
+  files. If you still can't get it to work you can mail me: &lt;<a href="mailto:pascal@dynamic-core.net"><i>pascal@dynamic-core.net</i></a>&gt;</p>
+<p>&nbsp;</p>
+<i>Last modified 2000-07-20</i> 
+<p>&nbsp;</p>
+</body>
+</html>
